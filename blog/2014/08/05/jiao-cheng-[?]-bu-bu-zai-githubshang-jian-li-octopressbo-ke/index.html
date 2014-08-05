@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
@@ -9,7 +8,6 @@
   <meta name="author" content="Jason.Liao">
 
   
-  <meta name="description" content="[转]教程:一步步在github上建立octopress博客 [TOC] 原文: http://never.doubting.me/2013/04/18/2013-04-18-setup-octopress-on-github-step-by-step/ 照此教程,可搭建此博客. 目标 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,59 +17,71 @@
 
   
   <link rel="canonical" href="http://xtulnx.github.io/blog/2014/08/05/jiao-cheng-%5B%3F%5D-bu-bu-zai-githubshang-jian-li-octopressbo-ke">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="Jason's Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+  <link href="/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
   
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Jason's Blog</a></h1>
-  
-    <h2>自由的记录。。。</h2>
-  
-</hgroup>
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jason's Blog</a>
+        </div>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:xtulnx.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Blog</a></li>
+                <li><a href="/blog/archives">Archives</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:xtulnx.github.io">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9">
+    <article class="hentry" role="article">
+      
+  <header class="page-header">
     
-      <h1 class="entry-title">教程:一步步在github上建立octopress博客</h1>
-    
-    
-      <p class="meta">
+      <p class="meta text-muted text-uppercase">
         
 
 
@@ -81,17 +91,24 @@
 
 
 
-  
 
 
-<time datetime="2014-08-05T21:57:06+08:00" pubdate data-updated="true">Aug 5<sup>th</sup>, 2014</time>
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-05T21:57:06+08:00" pubdate data-updated="true">Aug 5<sup>th</sup>, 2014</time>
         
       </p>
+    
+    
+    <h1 class="entry-title">
+        教程:一步步在github上建立octopress博客
+        
+    </h1>
     
   </header>
 
 
-<div class="entry-content"><h1>[转]教程:一步步在github上建立octopress博客</h1>
+<div class="entry-content clearfix"><h1>[转]教程:一步步在github上建立octopress博客</h1>
 
 <p>[TOC]</p>
 
@@ -402,38 +419,30 @@
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        <p class="meta text-muted">
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Jason.Liao</span></span>
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">Jason.Liao</span></span>
 
-      
-
-
+          
 
 
 
 
 
 
-  
 
 
-<time datetime="2014-08-05T21:57:06+08:00" pubdate data-updated="true">Aug 5<sup>th</sup>, 2014</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/jiao-cheng/'>教程</a>
-  
-</span>
 
 
-    </p>
-    
-      <div class="sharing">
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-05T21:57:06+08:00" pubdate data-updated="true">Aug 5<sup>th</sup>, 2014</time>
+        </p>
+        
+          <div class="sharing">
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://xtulnx.github.io/blog/2014/08/05/jiao-cheng-%5B%3F%5D-bu-bu-zai-githubshang-jian-li-octopressbo-ke/" data-via="" data-counturl="http://xtulnx.github.io/blog/2014/08/05/jiao-cheng-%5B%3F%5D-bu-bu-zai-githubshang-jian-li-octopressbo-ke/" >Tweet</a>
   
@@ -441,46 +450,34 @@
   
 </div>
 
+        
+        
+      </footer>
+    </article>
     
-    <p class="meta">
-      
-      
-    </p>
-  </footer>
-</article>
-
+  </div>
 </div>
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/08/05/jiao-cheng-%5B%3F%5D-bu-bu-zai-githubshang-jian-li-octopressbo-ke/">教程:一步步在github上建立octopress博客</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Jason.Liao -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+        </div>
+      </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2014 - Jason.Liao<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
+      <span class="credit">customized with <a href="https://github.com/mjhea0/octoplate">Octoplate</a></span>.
+  </small>
+  <a href="#" id="back">Back to Top</a>
 </p>
 
+<nav id="bottom" class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+</nav>
+
+</div>
 </footer>
-  
+    <script src="/javascripts/libs/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
 
 
 
@@ -502,5 +499,6 @@
 
 
 
-</body>
+    </div>
+  </body>
 </html>
