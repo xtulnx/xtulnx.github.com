@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Jason's Blog]]></title>
   <link href="http://xtulnx.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://xtulnx.github.io/"/>
-  <updated>2014-08-05T22:15:33+08:00</updated>
+  <updated>2014-08-05T22:28:39+08:00</updated>
   <id>http://xtulnx.github.io/</id>
   <author>
     <name><![CDATA[Jason.Liao]]></name>
@@ -199,7 +199,7 @@ external-url: http://keep.doubting.me/
 
 <h4>11) 发表页面</h4>
 
-<p>创建网址为<a href="http://never.doubting.me/about/i.html%E7%9A%84%E7%BD%91%E9%A1%B5:">http://never.doubting.me/about/i.html%E7%9A%84%E7%BD%91%E9%A1%B5:</a></p>
+<p>创建网址为 <a href="http://never.doubting.me/about/i.html">http://never.doubting.me/about/i.html</a> 的网页:</p>
 
 <pre><code>rake new_page[about/i.html]
 </code></pre>
