@@ -4,7 +4,7 @@
   <title><![CDATA[Jason's Blog]]></title>
   <link href="http://xtulnx.github.io/atom.xml" rel="self"/>
   <link href="http://xtulnx.github.io/"/>
-  <updated>2014-08-06T00:22:16+08:00</updated>
+  <updated>2014-08-06T15:00:35+08:00</updated>
   <id>http://xtulnx.github.io/</id>
   <author>
     <name><![CDATA[Jason.Liao]]></name>
@@ -12,6 +12,234 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress(jekyll) Variables]]></title>
+    <link href="http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables/"/>
+    <updated>2014-08-06T14:43:16+08:00</updated>
+    <id>http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables</id>
+    <content type="html"><![CDATA[<ul>
+<li>参考：
+
+<ul>
+<li><a href="http://jekyllrb.com/docs/variables/">http://jekyllrb.com/docs/variables/</a></li>
+</ul>
+</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h1>Variables</h1>
+
+<p>Jekyll traverses your site looking for files to process. Any files with <code>YAML front matter</code> are subject to processing. For each of these files, Jekyll makes a variety of data available via the <code>Liquid templating system</code>. The following is a reference of the available data.</p>
+
+<h2>Global Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>site</code> </td>
+<td style="text-align:left;"> Sitewide information + configuration settings from <strong>_config.yml</strong>. See below for details. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page</code> </td>
+<td style="text-align:left;"> Page specific information + the <code>YAML front matter</code>. Custom variables set via the YAML Front Matter will be available here. See below for details. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>content</code> </td>
+<td style="text-align:left;"> In layout files, the rendered content of the Post or Page being wrapped. Not defined in Post or Page files. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator</code> </td>
+<td style="text-align:left;"> When the <strong>paginate</strong> configuration option is set, this variable becomes available for use. See <strong>Pagination</strong> for details. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Site Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>site.time</code> </td>
+<td style="text-align:left;"> The current time (when you run the jekyll command). </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.pages</code> </td>
+<td style="text-align:left;"> A list of all Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.posts</code> </td>
+<td style="text-align:left;"> A reverse chronological list of all Posts. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.related_posts</code> </td>
+<td style="text-align:left;"> If the page being processed is a Post, this contains a list of up to ten related Posts. By default, these are low quality but fast to compute. For high quality but slow to compute results, run the  <strong>jekyll</strong> command with the <strong>&ndash;lsi</strong> (latent semantic indexing) option. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.static_files</code> </td>
+<td style="text-align:left;"> A list of all static files (i.e. files not processed by Jekyll&rsquo;s converters or the Liquid renderer). Each file has three properties:  <strong>path</strong>, <strong>modified_time</strong> and <strong>extname</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.html_pages</code> </td>
+<td style="text-align:left;"> A list of all HTML Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.collections</code> </td>
+<td style="text-align:left;"> A list of all the collections. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.data</code> </td>
+<td style="text-align:left;"> A list containing the data loaded from the YAML files located in the <strong>_data</strong> directory. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.documents</code> </td>
+<td style="text-align:left;"> A list of all the documents in every collection. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.categories.CATEGORY</code> </td>
+<td style="text-align:left;"> The list of all Posts in category <strong>CATEGORY</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.tags.TAG</code> </td>
+<td style="text-align:left;"> The list of all Posts with tag <strong>TAG</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.[CONFIGURATION_DATA]</code> </td>
+<td style="text-align:left;"> All the variables set via the command line and your <strong>_config.yml</strong> are available through the <strong>site variable</strong>. For example, if you have <strong>url: <a href="http://mysite.com**">http://mysite.com**</a> in your configuration file, then in your Posts and Pages it will be stored in </strong>site.url<strong>. Jekyll does not parse changes to  </strong>_config.yml<strong> in </strong>watch** mode, you must restart Jekyll to see changes to variables. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Page Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>page.content</code> </td>
+<td style="text-align:left;"> The content of the Page, rendered or un-rendered depending upon what Liquid is being processed and what <code>page</code> is. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.title</code> </td>
+<td style="text-align:left;"> The title of the Page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.excerpt</code> </td>
+<td style="text-align:left;"> The un-rendered excerpt of the Page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.url</code> </td>
+<td style="text-align:left;"> The URL of the Post without the domain, but with a leading slash, e.g.  <strong>/2008/12/14/my-post.html</strong> </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.date</code> </td>
+<td style="text-align:left;"> The Date assigned to the Post. This can be overridden in a Post’s front matter by specifying a new date/time in the format <strong>YYYY-MM-DD HH:MM:SS</strong> (assuming UTC), or <strong>YYYY-MM-DD HH:MM:SS +/-TTTT</strong> (to specify a time zone using an offset from UTC. e.g. <strong>2008-12-14 10:30:00 +0900)</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.id</code> </td>
+<td style="text-align:left;"> An identifier unique to the Post (useful in RSS feeds). e.g. <strong>/2008/12/14/my-post</strong> </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.categories</code> </td>
+<td style="text-align:left;"> The list of categories to which this post belongs. Categories are derived from the directory structure above the <strong>_posts</strong> directory. For example, a post at <strong>/work/code/_posts/2008-12-24-closures.md</strong> would have this field set to <strong>[&lsquo;work&rsquo;, &lsquo;code&rsquo;]</strong>. These can also be specified in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.tags</code> </td>
+<td style="text-align:left;"> The list of tags to which this post belongs. These can be specified in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.path</code> </td>
+<td style="text-align:left;"> The path to the raw post or page. Example usage: Linking back to the page or post’s source on GitHub. This can be overridden in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.next</code> </td>
+<td style="text-align:left;"> The next post relative to the position of the current post in <strong>site.posts</strong>. Returns <strong>nil</strong> for the last entry. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.previous</code> </td>
+<td style="text-align:left;"> The previous post relative to the position of the current post in <strong>site.posts</strong>. Returns <strong>nil</strong> for the first entry. </td>
+</tr>
+</tbody>
+</table>
+
+
+<blockquote><p><code>ProTip™</code></p>
+
+<blockquote><p>Use Custom Front Matter` | Any custom front matter that you specify will be available under <strong>page</strong>. For example, if you specify <strong>custom_css</strong>: true in a page’s front matter, that value will be available as <strong>page.custom_css</strong>.</p></blockquote></blockquote>
+
+<h2>Paginator</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>paginator.per_page</code> </td>
+<td style="text-align:left;"> Number of Posts per page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.posts</code> </td>
+<td style="text-align:left;"> Posts available for that page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.total_posts</code> </td>
+<td style="text-align:left;"> Total number of Posts. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.total_pages</code> </td>
+<td style="text-align:left;"> Total number of Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.page</code> </td>
+<td style="text-align:left;"> The number of the current page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.previous_page</code> </td>
+<td style="text-align:left;"> The number of the previous page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.previous_page_path</code> </td>
+<td style="text-align:left;"> The path to the previous page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.next_page</code> </td>
+<td style="text-align:left;"> The number of the next page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.next_page_path</code> </td>
+<td style="text-align:left;"> The path to the next page. </td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[教程:一步步在github上建立octopress博客]]></title>
@@ -101,33 +329,24 @@
 
 <p>octopress的源代码同样在github上管理,因此我们使用git克隆一份到本地的<code>never.doubting.me</code>文件夹,并进入此文件夹. 如你没有域名,可以使用github提供的默认域名:<code>yourname.github.com</code>,yourname是你github的用户名.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git never.doubting.me
-</span><span class='line'>cd never.doubting.me</span></code></pre></td></tr></table></div></figure>
+<blockquote><p>git clone git://github.com/imathis/octopress.git never.doubting.me</p>
 
+<p>cd never.doubting.me</p></blockquote>
 
 <h4>2) 安装相关组件</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
-</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>gem install bundler
+bundle install</p></blockquote>
 
 <h4>3) 安装主题</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>rake install</p></blockquote>
 
 <p>上条命令安装默认主题,在<code>https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes</code>可以找到许多第三方主题,这儿我们选择<code>slash</code>主题,如询问是否覆盖,选择是:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
-</span><span class='line'>rake install['slash']</span></code></pre></td></tr></table></div></figure>
+<blockquote><p>git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash</p>
 
+<p>rake install[&lsquo;slash&rsquo;]</p></blockquote>
 
 <h4>4) 在github上创建repository</h4>
 
@@ -136,15 +355,11 @@
 注意:repository的名字一定要<code>yourname.github.com</code>这样的格式. yourname是你注册时的用户名.
 这儿我创建名为znithy.github.com的repository,创建好后拷贝ssh地址.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git@github.com:znithy/znithy.github.com.git</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>git@github.com:znithy/znithy.github.com.git</p></blockquote>
 
 <h4>5) 建立本地与github的联系</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>rake setup_github_pages</p></blockquote>
 
 <p>输入上述ssh地址,注意区分大小写. 如遇验证问题,提示类似</p>
 
@@ -168,17 +383,13 @@
 
 <p>首先把你的域名指向207.97.227.245,如不知怎么操作,请咨询域名注册商. 在source文件夹下建立CNAME文件:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo 'never.doubting.me' &gt;&gt; source/CNAME</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>echo &lsquo;never.doubting.me&rsquo; >> source/CNAME</p></blockquote>
 
 <h4>7) 生成网页并推送到github</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+<blockquote><p>rake generate</p>
 
+<p>rake deploy</p></blockquote>
 
 <p>稍等几分钟,你就可通过域名访问博客了.并且收到一封博客建立的信件.</p>
 
@@ -186,17 +397,13 @@
 
 <p>博客的基本信息在_config.yml文件中修改. 自定义css等在source文件夹中. 修改后别忘了:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+<blockquote><p>rake generate</p>
 
+<p>rake deploy</p></blockquote>
 
 <h4>9) 发表文章</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["教程:一步步在github上建立octopress博客"]</span></code></pre></td></tr></table></div></figure>
-
+<blockquote><p>rake new_post[&ldquo;教程:一步步在github上建立octopress博客&rdquo;]</p></blockquote>
 
 <p>这儿我新建了一篇名为教程:一步步在github上建立octopress博客的文章. 之后去source/_post/文件夹找到对应.markdown文件修改.
 打开文件后可以看到文件头包含一些文章的信息,这儿我修改为:</p>

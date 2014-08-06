@@ -1,0 +1,404 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Octopress(jekyll) Variables - Jason's Blog</title>
+	<meta name="author" content="Jason.Liao">
+
+	
+	<meta name="description" content="参考： http://jekyllrb.com/docs/variables/ Variables Jekyll traverses your site looking for files to process. Any files with YAML front matter are &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Jason's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Jason's Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">归档</a></li>
+	<li><a href="/about">关于</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">归档</a></li>
+	<li><a href="/about">关于</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com.hk/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:xtulnx.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com.hk/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:xtulnx.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Octopress(jekyll) Variables</h2>
+	<div class="entry-content"><ul>
+<li>参考：
+
+<ul>
+<li><a href="http://jekyllrb.com/docs/variables/">http://jekyllrb.com/docs/variables/</a></li>
+</ul>
+</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h1>Variables</h1>
+
+<p>Jekyll traverses your site looking for files to process. Any files with <code>YAML front matter</code> are subject to processing. For each of these files, Jekyll makes a variety of data available via the <code>Liquid templating system</code>. The following is a reference of the available data.</p>
+
+<h2>Global Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>site</code> </td>
+<td style="text-align:left;"> Sitewide information + configuration settings from <strong>_config.yml</strong>. See below for details. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page</code> </td>
+<td style="text-align:left;"> Page specific information + the <code>YAML front matter</code>. Custom variables set via the YAML Front Matter will be available here. See below for details. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>content</code> </td>
+<td style="text-align:left;"> In layout files, the rendered content of the Post or Page being wrapped. Not defined in Post or Page files. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator</code> </td>
+<td style="text-align:left;"> When the <strong>paginate</strong> configuration option is set, this variable becomes available for use. See <strong>Pagination</strong> for details. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Site Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>site.time</code> </td>
+<td style="text-align:left;"> The current time (when you run the jekyll command). </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.pages</code> </td>
+<td style="text-align:left;"> A list of all Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.posts</code> </td>
+<td style="text-align:left;"> A reverse chronological list of all Posts. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.related_posts</code> </td>
+<td style="text-align:left;"> If the page being processed is a Post, this contains a list of up to ten related Posts. By default, these are low quality but fast to compute. For high quality but slow to compute results, run the  <strong>jekyll</strong> command with the <strong>&ndash;lsi</strong> (latent semantic indexing) option. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.static_files</code> </td>
+<td style="text-align:left;"> A list of all static files (i.e. files not processed by Jekyll&rsquo;s converters or the Liquid renderer). Each file has three properties:  <strong>path</strong>, <strong>modified_time</strong> and <strong>extname</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.html_pages</code> </td>
+<td style="text-align:left;"> A list of all HTML Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.collections</code> </td>
+<td style="text-align:left;"> A list of all the collections. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.data</code> </td>
+<td style="text-align:left;"> A list containing the data loaded from the YAML files located in the <strong>_data</strong> directory. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.documents</code> </td>
+<td style="text-align:left;"> A list of all the documents in every collection. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.categories.CATEGORY</code> </td>
+<td style="text-align:left;"> The list of all Posts in category <strong>CATEGORY</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.tags.TAG</code> </td>
+<td style="text-align:left;"> The list of all Posts with tag <strong>TAG</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>site.[CONFIGURATION_DATA]</code> </td>
+<td style="text-align:left;"> All the variables set via the command line and your <strong>_config.yml</strong> are available through the <strong>site variable</strong>. For example, if you have <strong>url: <a href="http://mysite.com**">http://mysite.com**</a> in your configuration file, then in your Posts and Pages it will be stored in </strong>site.url<strong>. Jekyll does not parse changes to  </strong>_config.yml<strong> in </strong>watch** mode, you must restart Jekyll to see changes to variables. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Page Variables</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>page.content</code> </td>
+<td style="text-align:left;"> The content of the Page, rendered or un-rendered depending upon what Liquid is being processed and what <code>page</code> is. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.title</code> </td>
+<td style="text-align:left;"> The title of the Page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.excerpt</code> </td>
+<td style="text-align:left;"> The un-rendered excerpt of the Page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.url</code> </td>
+<td style="text-align:left;"> The URL of the Post without the domain, but with a leading slash, e.g.  <strong>/2008/12/14/my-post.html</strong> </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.date</code> </td>
+<td style="text-align:left;"> The Date assigned to the Post. This can be overridden in a Post’s front matter by specifying a new date/time in the format <strong>YYYY-MM-DD HH:MM:SS</strong> (assuming UTC), or <strong>YYYY-MM-DD HH:MM:SS +/-TTTT</strong> (to specify a time zone using an offset from UTC. e.g. <strong>2008-12-14 10:30:00 +0900)</strong>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.id</code> </td>
+<td style="text-align:left;"> An identifier unique to the Post (useful in RSS feeds). e.g. <strong>/2008/12/14/my-post</strong> </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.categories</code> </td>
+<td style="text-align:left;"> The list of categories to which this post belongs. Categories are derived from the directory structure above the <strong>_posts</strong> directory. For example, a post at <strong>/work/code/_posts/2008-12-24-closures.md</strong> would have this field set to <strong>[&lsquo;work&rsquo;, &lsquo;code&rsquo;]</strong>. These can also be specified in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.tags</code> </td>
+<td style="text-align:left;"> The list of tags to which this post belongs. These can be specified in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.path</code> </td>
+<td style="text-align:left;"> The path to the raw post or page. Example usage: Linking back to the page or post’s source on GitHub. This can be overridden in the <code>YAML Front Matter</code>. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.next</code> </td>
+<td style="text-align:left;"> The next post relative to the position of the current post in <strong>site.posts</strong>. Returns <strong>nil</strong> for the last entry. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>page.previous</code> </td>
+<td style="text-align:left;"> The previous post relative to the position of the current post in <strong>site.posts</strong>. Returns <strong>nil</strong> for the first entry. </td>
+</tr>
+</tbody>
+</table>
+
+
+<blockquote><p><code>ProTip™</code></p>
+
+<blockquote><p>Use Custom Front Matter` | Any custom front matter that you specify will be available under <strong>page</strong>. For example, if you specify <strong>custom_css</strong>: true in a page’s front matter, that value will be available as <strong>page.custom_css</strong>.</p></blockquote></blockquote>
+
+<h2>Paginator</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> VARIABLE </th>
+<th style="text-align:left;"> DESCRIPTION </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <code>paginator.per_page</code> </td>
+<td style="text-align:left;"> Number of Posts per page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.posts</code> </td>
+<td style="text-align:left;"> Posts available for that page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.total_posts</code> </td>
+<td style="text-align:left;"> Total number of Posts. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.total_pages</code> </td>
+<td style="text-align:left;"> Total number of Pages. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.page</code> </td>
+<td style="text-align:left;"> The number of the current page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.previous_page</code> </td>
+<td style="text-align:left;"> The number of the previous page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.previous_page_path</code> </td>
+<td style="text-align:left;"> The path to the previous page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.next_page</code> </td>
+<td style="text-align:left;"> The number of the next page. </td>
+</tr>
+<tr>
+<td style="text-align:left;"> <code>paginator.next_page_path</code> </td>
+<td style="text-align:left;"> The path to the next page. </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-06T14:43:16+08:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/jekyll/'>jekyll</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/variables/'>variables</a>, <a class='category' href='/blog/categories/jiao-cheng/'>教程</a>
+
+
+</div>
+	
+
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+
+
+<section id="comment">
+    <h2 class="title">发表评论</h2>
+	<div id="comments" aria-live="polite"><!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2014/08/06/octopress-jekyll-variables" data-title="Octopress(jekyll) Variables" data-url="/blog/2014/08/06/octopress-jekyll-variables/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"xtulnx"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</div>
+</section>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Jason.Liao
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'xtulnx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables/';
+        var disqus_url = 'http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>

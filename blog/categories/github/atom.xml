@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Jason's Blog]]></title>
   <link href="http://xtulnx.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://xtulnx.github.io/"/>
-  <updated>2014-08-06T00:22:16+08:00</updated>
+  <updated>2014-08-06T15:00:35+08:00</updated>
   <id>http://xtulnx.github.io/</id>
   <author>
     <name><![CDATA[Jason.Liao]]></name>
@@ -101,41 +101,37 @@
 
 <p>octopress的源代码同样在github上管理,因此我们使用git克隆一份到本地的<code>never.doubting.me</code>文件夹,并进入此文件夹. 如你没有域名,可以使用github提供的默认域名:<code>yourname.github.com</code>,yourname是你github的用户名.</p>
 
-<pre><code>git clone git://github.com/imathis/octopress.git never.doubting.me
-cd never.doubting.me
-</code></pre>
+<blockquote><p>git clone git://github.com/imathis/octopress.git never.doubting.me</p>
+
+<p>cd never.doubting.me</p></blockquote>
 
 <h4>2) 安装相关组件</h4>
 
-<pre><code>gem install bundler
-bundle install
-</code></pre>
+<blockquote><p>gem install bundler
+bundle install</p></blockquote>
 
 <h4>3) 安装主题</h4>
 
-<pre><code>rake install
-</code></pre>
+<blockquote><p>rake install</p></blockquote>
 
 <p>上条命令安装默认主题,在<code>https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes</code>可以找到许多第三方主题,这儿我们选择<code>slash</code>主题,如询问是否覆盖,选择是:</p>
 
-<pre><code>git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
-rake install['slash']
-</code></pre>
+<blockquote><p>git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash</p>
+
+<p>rake install[&lsquo;slash&rsquo;]</p></blockquote>
 
 <h4>4) 在github上创建repository</h4>
 
 <p>去Github上注册个账户,选择免费套餐.
 新建一个repository.
 注意:repository的名字一定要<code>yourname.github.com</code>这样的格式. yourname是你注册时的用户名.
-这儿我创建名为znithy.github.com的repository,创建好后拷贝ssh地址.
-<code>
-git@github.com:znithy/znithy.github.com.git
-</code></p>
+这儿我创建名为znithy.github.com的repository,创建好后拷贝ssh地址.</p>
+
+<blockquote><p>git@github.com:znithy/znithy.github.com.git</p></blockquote>
 
 <h4>5) 建立本地与github的联系</h4>
 
-<pre><code>rake setup_github_pages
-</code></pre>
+<blockquote><p>rake setup_github_pages</p></blockquote>
 
 <p>输入上述ssh地址,注意区分大小写. 如遇验证问题,提示类似</p>
 
@@ -153,14 +149,13 @@ Tasks: TOP =&gt; setup_github_pages
 
 <p>首先把你的域名指向207.97.227.245,如不知怎么操作,请咨询域名注册商. 在source文件夹下建立CNAME文件:</p>
 
-<pre><code>echo 'never.doubting.me' &gt;&gt; source/CNAME
-</code></pre>
+<blockquote><p>echo &lsquo;never.doubting.me&rsquo; >> source/CNAME</p></blockquote>
 
 <h4>7) 生成网页并推送到github</h4>
 
-<pre><code>rake generate
-rake deploy
-</code></pre>
+<blockquote><p>rake generate</p>
+
+<p>rake deploy</p></blockquote>
 
 <p>稍等几分钟,你就可通过域名访问博客了.并且收到一封博客建立的信件.</p>
 
@@ -168,14 +163,13 @@ rake deploy
 
 <p>博客的基本信息在_config.yml文件中修改. 自定义css等在source文件夹中. 修改后别忘了:</p>
 
-<pre><code>rake generate
-rake deploy
-</code></pre>
+<blockquote><p>rake generate</p>
+
+<p>rake deploy</p></blockquote>
 
 <h4>9) 发表文章</h4>
 
-<pre><code>rake new_post["教程:一步步在github上建立octopress博客"]
-</code></pre>
+<blockquote><p>rake new_post[&ldquo;教程:一步步在github上建立octopress博客&rdquo;]</p></blockquote>
 
 <p>这儿我新建了一篇名为教程:一步步在github上建立octopress博客的文章. 之后去source/_post/文件夹找到对应.markdown文件修改.
 打开文件后可以看到文件头包含一些文章的信息,这儿我修改为:</p>

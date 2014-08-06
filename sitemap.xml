@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables/</loc>
+    <lastmod>2014-08-06T14:43:16+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://xtulnx.github.io/blog/2014/08/05/jiao-cheng-yi-bu-bu-zai-githubshang-jian-li-octopressbo-ke/</loc>
     <lastmod>2014-08-05T21:57:06+08:00</lastmod>
     <priority>0.8</priority>
@@ -11,56 +17,77 @@
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/components.html</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/css.html</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/customize.html</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/getting-started.html</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/blog/archives/</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://xtulnx.github.io/about/</loc>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://xtulnx.github.io/octopress/jekyll-variables/</loc>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://xtulnx.github.io/octopress/</loc>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://xtulnx.github.io/javascripts/libs/bootstrap-3.0.0/javascript.html</loc>
-    <lastmod>2014-08-06T00:22:16+08:00</lastmod>
+    <lastmod>2014-08-06T15:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
