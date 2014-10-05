@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://xtulnx.github.io/sitemap.xml 
+Sitemap: http://nx26.com/sitemap.xml 

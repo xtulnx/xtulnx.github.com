@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: -golang | My Octopress Blog]]></title>
+  <link href="http://nx26.com/blog/categories/golang/atom.xml" rel="self"/>
+  <link href="http://nx26.com/"/>
+  <updated>2014-10-05T13:21:57+08:00</updated>
+  <id>http://nx26.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下go语言获得系统进程cpu使用情况]]></title>
+    <link href="http://nx26.com/blog/2014/08/09/golangn-huo-de-xi-tong-jin-cheng-cpu-shi-yong-qing-kuang/"/>
+    <updated>2014-08-09T00:07:33+08:00</updated>
+    <id>http://nx26.com/blog/2014/08/09/golangn-huo-de-xi-tong-jin-cheng-cpu-shi-yong-qing-kuang</id>
+    <content type="html"><![CDATA[<h1>[转]linux下通过go语言获得系统进程cpu使用情况</h1>
+
+<ul>
+<li>来源: <a href="http://www.sharejs.com/codes/go/5662">http://www.sharejs.com/codes/go/5662</a></li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>linux下通过go语言获得系统进程cpu使用情况，这段代码通过linux的系统命令 ps来分析cpu的使用情况.</p>
+
+<pre><code>package main
+
+import (
+    "bytes"
+    "log"
+    "os/exec"
+    "strconv"
+    "strings"
+)
+
+type Process struct {
+    pid int
+    cpu float64
+}
+
+func main() {
+    cmd := exec.Command("ps", "aux")
+    var out bytes.Buffer
+    cmd.Stdout = &amp;out
+    err := cmd.Run()
+    if err != nil {
+        log.Fatal(err)
+    }
+    processes := make([]*Process, 0)
+    for {
+        line, err := out.ReadString('\n')
+        if err!=nil {
+            break;
+        }
+        tokens := strings.Split(line, " ")
+        ft := make([]string, 0)
+        for _, t := range(tokens) {
+            if t!="" &amp;&amp; t!="\t" {
+                ft = append(ft, t)
+            }
+        }
+        log.Println(len(ft), ft)
+        pid, err := strconv.Atoi(ft[1])
+        if err!=nil {
+            continue
+        }
+        cpu, err := strconv.ParseFloat(ft[2], 64)
+        if err!=nil {
+            log.Fatal(err)
+        }
+        processes = append(processes, &amp;Process{pid, cpu})
+    }
+    for _, p := range(processes) {
+        log.Println("Process ", p.pid, " takes ", p.cpu, " % of the CPU")
+    }
+}
+//该代码片段来自于: http://www.sharejs.com/codes/go/5662
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

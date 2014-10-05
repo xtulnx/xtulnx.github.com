@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: variables | Jason's Blog]]></title>
-  <link href="http://xtulnx.github.io/blog/categories/variables/atom.xml" rel="self"/>
-  <link href="http://xtulnx.github.io/"/>
-  <updated>2014-08-06T15:00:35+08:00</updated>
-  <id>http://xtulnx.github.io/</id>
+  <title><![CDATA[Category: Variables | My Octopress Blog]]></title>
+  <link href="http://nx26.com/blog/categories/variables/atom.xml" rel="self"/>
+  <link href="http://nx26.com/"/>
+  <updated>2014-10-05T13:21:57+08:00</updated>
+  <id>http://nx26.com/</id>
   <author>
-    <name><![CDATA[Jason.Liao]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress(jekyll) Variables]]></title>
-    <link href="http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables/"/>
+    <link href="http://nx26.com/blog/2014/08/06/octopress-jekyll-variables/"/>
     <updated>2014-08-06T14:43:16+08:00</updated>
-    <id>http://xtulnx.github.io/blog/2014/08/06/octopress-jekyll-variables</id>
+    <id>http://nx26.com/blog/2014/08/06/octopress-jekyll-variables</id>
     <content type="html"><![CDATA[<ul>
 <li>参考：
 
