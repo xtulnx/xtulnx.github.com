@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://nx26.com/atom.xml" rel="self"/>
   <link href="http://nx26.com/"/>
-  <updated>2014-10-29T21:16:52+08:00</updated>
+  <updated>2014-10-29T21:22:08+08:00</updated>
   <id>http://nx26.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Linux下go语言获得系统进程cpu使用情况]]></title>
+    <title type="html"><![CDATA[linux下go语言获得系统进程cpu使用情况]]></title>
     <link href="http://nx26.com/blog/2014/08/09/golangn-huo-de-xi-tong-jin-cheng-cpu-shi-yong-qing-kuang/"/>
     <updated>2014-08-09T00:07:33+08:00</updated>
     <id>http://nx26.com/blog/2014/08/09/golangn-huo-de-xi-tong-jin-cheng-cpu-shi-yong-qing-kuang</id>
